@@ -1,6 +1,6 @@
 import { GraphQLServer } from "graphql-yoga";
 
-const PORT = process.env.port || 3000;
+const PORT = process.env.PORT || 80;
 
 const typeDefs = `
   type Query {
