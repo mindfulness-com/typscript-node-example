@@ -5,7 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "start": "ts-node index.ts",
-    "test": "mocha -r ts-node/register **/*.spec.ts --exit"
+    "test": "mocha -r ts-node/register **/*.spec.ts --exit",
+    "test-report": "mocha -r ts-node/register **/*.spec.ts --exit > test-results.txt > test-results.txt"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,6 @@
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
   }
 }
