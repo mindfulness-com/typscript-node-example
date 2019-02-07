@@ -40,3 +40,4 @@ const server = new GraphQLServer({ typeDefs, resolvers });
 server.start({ port: PORT }, () =>
   console.log(`Server is running on localhost:${PORT}`)
 );
+export default server;

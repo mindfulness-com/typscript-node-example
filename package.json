@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "start": "ts-node index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register **/*.spec.ts --exit"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +13,10 @@
     "graphql-yoga": "^1.17.4"
   },
   "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
     "ts-node": "^8.0.2",
     "typescript": "^3.3.1"
   }
