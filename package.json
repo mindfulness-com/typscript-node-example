@@ -10,14 +10,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "graphql-yoga": "^1.17.4"
+    "graphql-yoga": "^1.17.4",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.1"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0",
-    "ts-node": "^8.0.2",
-    "typescript": "^3.3.1"
+    "mocha": "^5.2.0"
   }
 }
