@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 orbs:
   heroku: circleci/heroku@1.0.0
 jobs:
@@ -34,7 +34,6 @@ jobs:
       - heroku/deploy-via-git:
           only-branch: master
 workflows:
-  version: 2
   deploy:
     jobs:
       - build
