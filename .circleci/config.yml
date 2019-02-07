@@ -12,7 +12,7 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: install-npm-wee
+          name: install-npm
           command: npm install
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
@@ -20,7 +20,12 @@ jobs:
             - ./node_modules
       - run:
           name: test
-          command: npm test
+          command: npm run test-report
       - store_artifacts:
           path: test-results.txt
           prefix: tests
+deployment:
+  production:
+    branch: master
+    heroku:
+      appname: typescript-node-example
