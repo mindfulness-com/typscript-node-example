@@ -26,9 +26,16 @@ jobs:
       - store_artifacts:
           path: test-results.txt
           prefix: tests
+  deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - heroku/deploy-via-git:
+          only-branch: master
 workflows:
   version: 2
-  workflow:
+  deploy:
     jobs:
       - build
-      - heroku/deploy-via-git
+      - deploy
