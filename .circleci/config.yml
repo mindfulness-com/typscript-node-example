@@ -1,4 +1,6 @@
 version: 2
+orbs:
+  heroku: circleci/heroku@1.0.0
 jobs:
   build:
     working_directory: ~/typescript-node-example
@@ -24,8 +26,8 @@ jobs:
       - store_artifacts:
           path: test-results.txt
           prefix: tests
-deployment:
-  production:
-    branch: master
-    heroku:
-      appname: typescript-node-example
+workflows:
+  workflow:
+    jobs:
+      - build
+      - heroku/deploy-via-git
