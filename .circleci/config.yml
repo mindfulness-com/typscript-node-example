@@ -27,6 +27,7 @@ jobs:
           path: test-results.txt
           prefix: tests
 workflows:
+  version: 2
   workflow:
     jobs:
       - build
